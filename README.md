@@ -20,7 +20,8 @@ _TODO (Sai, own words)._
 ## Device used for the demo
 - Path: physical iPhone with Expo Go (free; no Apple Developer subscription).
 - iPhone model / iOS version: _TODO (Sai)_
-- Demo video: _TODO (Sai: YouTube/Drive link with view access)_
+- Demo video: https://drive.google.com/file/d/1CTylx_4VwMiO22oqvrGvF4Rs0EtrU6d8/view?usp=sharing
+- Screenshot from the iPhone: [`docs/iphone-screenshot.png`](docs/iphone-screenshot.png)
 - Result: _TODO (Sai: worked / issues seen)_
 
 ## Setup (AI-assisted technical documentation)
@@ -83,4 +84,4 @@ The starter's npm audit reports three moderate findings in the Expo → fingerpr
 - `npx expo-doctor`: 20/20 checks passing.
 - iOS and web production bundle exports: successful.
 - Browser: create, compare (+10%), edit (+20%), reload persistence, blank-title rejection, cancel, and post-fix editor rendering verified.
-- Physical iPhone, VoiceOver and native keyboard: not yet tested.
+- Physical iPhone (Expo Go): Sai ran it and recorded the demo video, including closing and reopening the app. VoiceOver was not tested.
