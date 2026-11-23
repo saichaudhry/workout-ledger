@@ -2,27 +2,23 @@
 
 An iPhone workout logger built with React Native, Expo, and Expo Router. It has two screens, History and Log/Edit Workout, and saves workouts locally with AsyncStorage.
 
-<!-- ============ SAI: WRITE THESE THREE SECTIONS YOURSELF (assignment: "do not use AI") ============ -->
+<!-- The next three sections are Sai's own words. Claude Code only fixed spelling. -->
 
 ## What it does and why I chose it
-_TODO (Sai, 1–2 sentences, own words)._
+I enjoy working out and want to be able to measure and calculate how much effort I put into my workouts. I want to eventually connect this to a workout/fitness band; this measures the first steps of effort on every workout I do.
 
 ## Screens
-_TODO (Sai, own words). Facts to write from, not to paste:_
-- History (`src/app/index.tsx`): list of saved workouts, newest first; each shows date, total volume, effort, and per-exercise % change vs. the last time you did that exercise; tap a card to edit; "Log workout" button.
-- Log / Edit Workout (`src/app/workout.tsx`): title, exercises (name, sets, reps, weight), add/remove exercise, optional effort 1–10 and notes, live volume total, Save / Cancel, validation errors.
+I measured chest press and bench press and tested how much weight it would calculate.
 
 ## One thing about mobile development that surprised me
-_TODO (Sai, own words)._
-
-<!-- ============ END SAI-ONLY SECTIONS ============ -->
+Phone development was surprisingly easier than I expected.
 
 ## Device used for the demo
 - Path: physical iPhone with Expo Go (free; no Apple Developer subscription).
-- iPhone model / iOS version: _TODO (Sai)_
+- iPhone model / iOS version: iPhone 16, iOS 27.2.1
 - Demo video: https://drive.google.com/file/d/1CTylx_4VwMiO22oqvrGvF4Rs0EtrU6d8/view?usp=sharing
 - Screenshot from the iPhone: [`docs/iphone-screenshot.png`](docs/iphone-screenshot.png)
-- Result: _TODO (Sai: worked / issues seen)_
+- Result: worked
 
 ## Setup (AI-assisted technical documentation)
 - Node.js 22.13+; developed with Node 24.15.0.
