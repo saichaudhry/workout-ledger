@@ -1,18 +1,33 @@
 # Workout Ledger
 
-> Submission status: implementation, independent review fixes, and automated checks are complete. Physical iPhone testing and video are still required. This README does not claim those have happened.
+An iPhone workout logger built with React Native, Expo, and Expo Router. It has two screens, History and Log/Edit Workout, and saves workouts locally with AsyncStorage.
 
-## Student-written sections to complete
-The assignment explicitly asks for these in your own words:
-- What the app does and why you chose it (1–2 sentences).
-- Describe each screen and what the user can do.
-- One thing about mobile development that surprised you.
+<!-- ============ SAI: WRITE THESE THREE SECTIONS YOURSELF (assignment: "do not use AI") ============ -->
+
+## What it does and why I chose it
+_TODO (Sai, 1–2 sentences, own words)._
+
+## Screens
+_TODO (Sai, own words). Facts to write from, not to paste:_
+- History (`src/app/index.tsx`): list of saved workouts, newest first; each shows date, total volume, effort, and per-exercise % change vs. the last time you did that exercise; tap a card to edit; "Log workout" button.
+- Log / Edit Workout (`src/app/workout.tsx`): title, exercises (name, sets, reps, weight), add/remove exercise, optional effort 1–10 and notes, live volume total, Save / Cancel, validation errors.
+
+## One thing about mobile development that surprised me
+_TODO (Sai, own words)._
+
+<!-- ============ END SAI-ONLY SECTIONS ============ -->
+
+## Device used for the demo
+- Path: physical iPhone with Expo Go (free; no Apple Developer subscription).
+- iPhone model / iOS version: _TODO (Sai)_
+- Demo video: _TODO (Sai: YouTube/Drive link with view access)_
+- Result: _TODO (Sai: worked / issues seen)_
 
 ## Setup (AI-assisted technical documentation)
 - Node.js 22.13+; developed with Node 24.15.0.
 - Expo SDK **58** (`expo ~58.0.26`), selected by `create-expo-app@latest` without a template override.
 - React Native 0.88.1, Expo Router 58, AsyncStorage for local persistence.
-- Intended demo: physical iPhone with the App Store's free Expo Go. **Not yet verified on the phone.**
+- Demo device: physical iPhone with the App Store's free Expo Go (see "Device used for the demo").
 
 ```sh
 npm install
@@ -40,13 +55,13 @@ Workouts are stored locally under a versioned AsyncStorage key. Writes finish be
 5. Completely close Expo Go, reopen the project, and show both saved entries.
 6. Show validation for a blank exercise or invalid number, then cancel.
 
-Record actual results and your iPhone model/iOS version here after testing. Upload the video with accessible view permissions. Add the repo link, your own short description and a real phone screenshot to the portfolio, then submit the course Google form. The form URL was not included in the supplied prompt.
+Video: upload to YouTube or Google Drive with view access, then link it above. Submission form: https://forms.gle/rzAwetD6EBXSbEfo7
 
 ## Authorship and project history
-`SPEC.md` contains Sai's exact requirements plus AI-assisted acceptance criteria, committed before implementation. It is labeled honestly; the assignment asks for a student-written spec, so Sai must review that requirement before submission. `REVIEW.md` contains the independent agent's unedited review. `prompt_log.md` records actual prompts; no learning conversations or manual testing are invented.
+`SPEC.md` contains Sai's verbatim requirements plus AI-assisted acceptance criteria. Sai approved it, and it was committed before any app code (`d057f19`). It is labeled as AI-assisted rather than presented as written independently. `REVIEW.md` contains the independent agent's unedited review. `prompt_log.md` records actual prompts; no learning conversations or manual testing are invented.
 
 ## Review response
-The original `REVIEW.md` remains unchanged. Finding 11 was fixed with the installed React Native instance type, an undefined empty-list component, and Node/TypeScript test configuration. Finding 12 was resolved by a clean dependency install and explicit ESLint configuration. For finding 8, the editor now uses the actual navigation header height instead of a hard-coded keyboard offset; iPhone keyboard and VoiceOver still need device testing. For finding 13, comparison lookup now finds the latest matching session in a single pass rather than sorting history repeatedly. Indexing remains unnecessary for this assignment's small local dataset.
+The original `REVIEW.md` remains unchanged. Finding 11 was fixed with the installed React Native instance type, an undefined empty-list component, and Node/TypeScript test configuration. Finding 12 was resolved by a clean dependency install and explicit ESLint configuration. For finding 8, the editor now uses the actual navigation header height instead of a hard-coded keyboard offset; iPhone keyboard and VoiceOver still need device testing. For finding 13, comparison lookup now finds the latest matching session in a single pass rather than sorting history repeatedly. We are not adding a precomputed index because a personal workout history stays small. Finding 9 passed; its Android hardware-back caveat does not apply because the demo is iPhone-only.
 
 Findings 7 and 10 remain accurately qualified: native persistence, storage-I/O failure injection, the phone video, and the student-written sections are not automatically verified. Browser reload persistence passed, but it is not a substitute for force-closing/reopening Expo Go.
 

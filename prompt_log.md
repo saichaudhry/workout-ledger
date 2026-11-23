@@ -1,6 +1,6 @@
 # Prompt log
 
-Tool: OpenAI Codex desktop. Actual task prompts below are verbatim. The assignment was pasted in full in the conversation; it is reference material, not a fabricated student-written implementation prompt.
+Tools: OpenAI Codex desktop (spec, build, independent review, fixes); Claude Code (submission prep). Actual task prompts below are verbatim. The assignment was pasted in full in the conversation; it is reference material, not a fabricated student-written implementation prompt.
 
 ## Initial request
 ```text
@@ -40,3 +40,15 @@ Thanks. Parent was running first expo lint bootstrap concurrently, which may exp
 
 ## Actual interventions and validation
 Codex repaired the type errors identified by the reviewer, restored dependencies with npm ci after simultaneous lint bootstrap attempts collided, used the installed SDK's Expo Router navigation export for header height, formatted source for readability, and changed comparison lookup to a single pass. Browser testing entered two example workouts, verified +10%, edited to +20%, reloaded and confirmed saved data, and exercised blank-title validation and cancellation. These are browser checks, not a physical-phone demo. No student manual intervention or learning prompt is claimed.
+
+## Submission prep (Codex, verbatim)
+```text
+get everythihng ready to submit 
+```
+
+## Handoff to Claude Code (verbatim)
+Sai pasted the Codex conversation above into Claude Code with:
+```text
+can you take it from here, and let me know what to finsih
+```
+Claude Code fetched the HW10 brief and course late policy and mapped every REVIEW.md finding to the README. It also restructured the README so Sai's own-words sections are empty slots, added the form link and device line, and checked that a fresh clone installs, typechecks, and passes tests. It did not write any student-only prose.
