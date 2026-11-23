@@ -58,3 +58,9 @@ Claude Code fetched the HW10 brief and course late policy and mapped every REVIE
 for 2. i enjoy workin out and want to be able to measurecaluclate how much effort i put into my workouts, i want tot eventually connect this to a workout band /fitness band, this measures the first steps of efort on every workout i do. next, i measured chest press and bench press and tested how much weight it would calculate, phone devolepment was supriseinlhy easier than i expected, last answer, iphoen 16, 27.2.1 ios, and result worked fill these in
 ```
 Claude Code pasted these words into the README sections and fixed only spelling and capitalization. It did not add or reword any content.
+
+## README screen descriptions (verbatim, Sai to Claude Code)
+```text
+i can tap on hkstory pof all workouts and edit/delete the workouts in the past, for log i can type in / log anything that i hafve done and the reps, sets, as well as efort i have worked out
+```
+Claude Code pointed out that the app can't delete a saved workout. Sai chose to drop "/delete". Otherwise only spelling was fixed.

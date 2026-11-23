@@ -8,6 +8,9 @@ An iPhone workout logger built with React Native, Expo, and Expo Router. It has 
 I enjoy working out and want to be able to measure and calculate how much effort I put into my workouts. I want to eventually connect this to a workout/fitness band; this measures the first steps of effort on every workout I do.
 
 ## Screens
+- **History:** I can tap on the history of all workouts and edit the workouts in the past.
+- **Log:** I can type in/log anything that I have done, and the reps, sets, as well as effort I have worked out.
+
 I measured chest press and bench press and tested how much weight it would calculate.
 
 ## One thing about mobile development that surprised me
