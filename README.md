@@ -1,6 +1,6 @@
 # Workout Ledger
 
-> Submission status: implementation and automated checks are being completed. Physical iPhone testing and video are still required. This README does not claim those have happened.
+> Submission status: implementation, independent review fixes, and automated checks are complete. Physical iPhone testing and video are still required. This README does not claim those have happened.
 
 ## Student-written sections to complete
 The assignment explicitly asks for these in your own words:
@@ -43,4 +43,29 @@ Workouts are stored locally under a versioned AsyncStorage key. Writes finish be
 Record actual results and your iPhone model/iOS version here after testing. Upload the video with accessible view permissions. Add the repo link, your own short description and a real phone screenshot to the portfolio, then submit the course Google form. The form URL was not included in the supplied prompt.
 
 ## Authorship and project history
-`SPEC.md` contains Sai's exact requirements plus AI-assisted acceptance criteria, committed before implementation. It is labeled honestly; the assignment asks for a student-written spec, so Sai must review that requirement before submission. `REVIEW.md` will contain the independent agent's unedited review. `prompt_log.md` records actual prompts; no learning conversations or manual testing are invented.
+`SPEC.md` contains Sai's exact requirements plus AI-assisted acceptance criteria, committed before implementation. It is labeled honestly; the assignment asks for a student-written spec, so Sai must review that requirement before submission. `REVIEW.md` contains the independent agent's unedited review. `prompt_log.md` records actual prompts; no learning conversations or manual testing are invented.
+
+## Review response
+The original `REVIEW.md` remains unchanged. Finding 11 was fixed with the installed React Native instance type, an undefined empty-list component, and Node/TypeScript test configuration. Finding 12 was resolved by a clean dependency install and explicit ESLint configuration. For finding 8, the editor now uses the actual navigation header height instead of a hard-coded keyboard offset; iPhone keyboard and VoiceOver still need device testing. For finding 13, comparison lookup now finds the latest matching session in a single pass rather than sorting history repeatedly. Indexing remains unnecessary for this assignment's small local dataset.
+
+Findings 7 and 10 remain accurately qualified: native persistence, storage-I/O failure injection, the phone video, and the student-written sections are not automatically verified. Browser reload persistence passed, but it is not a substitute for force-closing/reopening Expo Go.
+
+## Preview and quick launch
+`docs/browser-preview.jpg` is a **browser preview with test data**, not a phone screenshot for submission. Double-click `START_IPHONE.command` in Finder to sign into Expo if needed and start a QR-code server on port 8082. Use the same Expo account on the iPhone. The CLI's account/session credentials are never stored in this repo.
+
+## Dependency note
+The starter's npm audit reports three moderate findings in the Expo → fingerprint → minimatch dependency chain. npm's proposed force fix downgrades Expo to SDK 52, so it was not applied. These packages are upstream tooling; the app exposes no API/server processing user glob patterns. Keep Expo-compatible upgrades in mind before production use.
+
+## Official setup references
+- [Create Expo App](https://docs.expo.dev/more/create-expo/)
+- [SDK 58 AsyncStorage — included in Expo Go](https://docs.expo.dev/versions/v58.0.0/sdk/async-storage/)
+- [iPhone Expo Go setup](https://docs.expo.dev/get-started/set-up-your-environment/?device=physical&platform=ios)
+
+## Verified in this build
+- `npm test`: 9/9 passing domain tests.
+- `npx tsc --noEmit`: passing.
+- `npx expo lint`: passing.
+- `npx expo-doctor`: 20/20 checks passing.
+- iOS and web production bundle exports: successful.
+- Browser: create, compare (+10%), edit (+20%), reload persistence, blank-title rejection, cancel, and post-fix editor rendering verified.
+- Physical iPhone, VoiceOver and native keyboard: not yet tested.

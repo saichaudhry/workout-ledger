@@ -27,3 +27,16 @@ great now buidl it fully out, let's trarget a build with minimal need from me fa
 
 ## Process notes
 Codex read previous GitHub project READMEs, checked Node, committed an AI-assisted spec, and generated an Expo SDK 58 starter. The app uses useState for editable drafts, context for shared workouts, Expo Router for screens, and AsyncStorage for persistence. These notes are not student learning prompts. No independent student questions about React Native concepts have been asked yet; add actual future questions verbatim.
+
+## Independent reviewer prompt (Codex-to-agent, verbatim)
+```text
+Review /Users/saichaudhry/workout-ledger React Native/Expo project against SPEC.md. User supplied HW10 assignment explicitly requests a fresh second-agent review. Read AGENTS.md. For each acceptance criterion verify code; check bugs, missing error handling, code quality, React Native practices. Run useful read-only checks. Format numbered findings [PASS], [FAIL], [WARN] with file names and line numbers. Do not fix any code. Write your unedited review to REVIEW.md at repository root. Be honest about phone testing not performed. You have no build conversation. Report findings when complete.
+```
+
+## Review follow-up (Codex-to-agent, verbatim)
+```text
+Thanks. Parent was running first expo lint bootstrap concurrently, which may explain install clash. Please avoid further dependency installs; finish review against raw source, preserve discovered failures in REVIEW.md. I will fix after review.
+```
+
+## Actual interventions and validation
+Codex repaired the type errors identified by the reviewer, restored dependencies with npm ci after simultaneous lint bootstrap attempts collided, used the installed SDK's Expo Router navigation export for header height, formatted source for readability, and changed comparison lookup to a single pass. Browser testing entered two example workouts, verified +10%, edited to +20%, reloaded and confirmed saved data, and exercised blank-title validation and cancellation. These are browser checks, not a physical-phone demo. No student manual intervention or learning prompt is claimed.
